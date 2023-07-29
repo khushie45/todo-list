@@ -1,0 +1,120 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+  
+body {
+    color: #fff;
+    max-width: 600px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.main-div {
+    background-color: rgb(9, 146, 148);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 0.5em;
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    align-self: center;
+}
+
+.new-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    font-family: sans-serif;
+    font-size: 1em;
+    align-self: center;
+    background: rgb(23, 23, 238);
+    border: none;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: rgb(69, 69, 232);
+}
+
+.btn.btn-danger {
+    padding: 0.6em 0.8em;
+    background: rgb(215, 28, 28);
+    color: white;
+    border: none;   
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger:focus-visible {
+    background: rgb(228, 51, 51);
+}
+
+.new-item-form input {
+    width: 300px;
+    margin: 0 auto;
+    font-size: 18px;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.8em;
+    color: black;
+    outline: none;
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+}
+
+.list li:has(input:checked) label {
+    color: hsl(201, 62%, 82%);
+}
+
+.list li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.list li label {
+    font-size: 20px;
+    display: flex;
+    gap: 0.5em;
+    cursor: pointer;
+    align-items: center;
+}
+
+.list li input {
+    display: none;
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: #fff;
+    border-radius: 0.1em;
+}
+
+.list li label:hover::before {
+    cursor: pointer;
+}
+
+.list li:has(input:checked) label::before {
+    content: "✔";
+    background: blue;
+    font-size: 0.65rem;
+}
