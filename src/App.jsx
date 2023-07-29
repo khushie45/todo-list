@@ -19,12 +19,6 @@ export default function App() {
       alert("You must write something!!")
     } else {
       setTodos((currentTodos) => {
-        if (newItem === "") {
-          alert("Cannot add empty item")
-          return [
-            ...currentTodos
-          ]
-        } else {
           return [
           ...currentTodos,
           {
@@ -34,7 +28,7 @@ export default function App() {
           }
           ]  
         }
-      })
+      )
       setNewItem("")
     }
   } 
